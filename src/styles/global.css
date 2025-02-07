@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+a {
+    pointer-events: auto; /* Asegúrate de que los enlaces sean clickeables */
+  }
