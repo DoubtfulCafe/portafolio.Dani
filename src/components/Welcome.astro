@@ -1,11 +1,9 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+
+
 ---
 
 <div class="relative min-h-screen bg-black text-white font-sans">
-	<!-- Fondo difuminado -->
-	<img id="background" src={background.src} alt="" class="absolute top-0 left-0 w-full h-full object-cover blur-xl opacity-10" />
   
 	<!-- Header -->
 	<header class="bg-gradient-to-r from-purple-900 to-blue-900 text-white py-12 text-center">
@@ -25,10 +23,10 @@ import background from '../assets/background.svg';
 	  <div class="grid md:grid-cols-2 gap-8">
 		<div>
 		  <p class="mb-4 text-gray-300">
-			Mi día a día consiste en identificar vulnerabilidades críticas y ayudar a organizaciones, especialmente en sectores regulados como servicios financieros y telecomunicaciones, a fortalecer su seguridad digital.
+			Mi objetivo es identificar vulnerabilidades críticas y ayudar a organizaciones, especialmente en sectores regulados como servicios financieros y telecomunicaciones, a fortalecer su seguridad digital. Aspiro a impactar en Centroamérica, Sudamérica y el Caribe, contribuyendo a un mundo más seguro y conectado.
 		  </p>
 		  <p class="mb-4 text-gray-300">
-			Además de la ciberseguridad, me encanta el desarrollo backend. Diseño soluciones técnicas que no solo resuelven problemas, sino que también son seguras, eficientes y escalables.
+			Además de la ciberseguridad, me encanta el desarrollo backend. Diseño soluciones técnicas que no solo resuelven problemas, sino que también son seguras, eficientes y escalables. Creo que la tecnología debe ser una aliada, no un riesgo, y por eso siempre busco equilibrar innovación con protección.
 		  </p>
 		  <p class="text-gray-300">
 			¿Te gustaría saber cómo puedo ayudar a tu organización a fortalecer su seguridad digital? ¡Contáctame!
@@ -37,9 +35,10 @@ import background from '../assets/background.svg';
 		<div class="bg-gray-800 p-6 rounded-lg">
 		  <h3 class="text-xl font-bold mb-4 text-purple-500">Habilidades Clave</h3>
 		  <ul class="list-disc list-inside text-gray-300">
-			<li>Ciberseguridad: Pentesting, Análisis de Vulnerabilidades</li>
-			<li>Desarrollo Backend: Python, Java, Spring Boot</li>
-			<li>Herramientas: Metasploit, Nessus, Nmap, Wireshark</li>
+			<li><strong>Ciberseguridad:</strong> Pentesting, Análisis de Vulnerabilidades, Simulaciones de ataques cibernéticos, Metasploit, Burp Suite.</li>
+			<li><strong>Desarrollo Backend:</strong> Python, Java, Spring Boot, Bases de datos (MySQL, Oracle, Supabase), Next.js, Laravel.</li>
+			<li><strong>Herramientas:</strong> Nessus, Nmap, Wireshark, CrackMapExec, BloodHound, JohnTheRipper, Hashcat.</li>
+			<li><strong>Metodologías:</strong> Agile, Scrum.</li>
 		  </ul>
 		</div>
 	  </div>
@@ -49,37 +48,114 @@ import background from '../assets/background.svg';
 	<section class="bg-gray-900 py-12">
 	  <div class="container mx-auto px-6">
 		<h2 class="text-3xl font-bold text-center mb-8 text-purple-500">Proyectos Destacados</h2>
-		<div class="flex justify-center gap-6">
-		  <div class="bg-gray-800 p-6 rounded-lg shadow-md max-w-md">
+		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+		  <!-- Proyecto 1 -->
+		  <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+			<img src="/images/NutriSim.png" alt="Simulador de Nutrición" class="w-full h-48 object-cover rounded-lg mb-4" />
 			<h3 class="text-xl font-bold mb-2 text-purple-500">Simulador de Nutrición</h3>
-			<p class="mb-4 text-gray-300">Aplicación que modela la evolución del estado nutricional basado en parámetros como dieta, actividad física y metabolismo.</p>
-			<p class="text-sm text-gray-500">Tecnologías: Python, MySQL</p>
+			<p class="mb-4 text-gray-300">Aplicación diseñada para simular la nutrición enteral y optimizar los cálculos nutricionales, proporcionando a los nutricionistas una herramienta precisa y eficiente para planificar tratamientos personalizados.</p>
+			<p class="text-sm text-gray-500">Tecnologías: Python, MongoDB, React</p>
+			<a href="https://github.com/DoubtfulCafe/backend_simulacion" target="_blank" class="text-purple-500 hover:underline">Ver Proyecto</a>
 		  </div>
-		  <div class="bg-gray-800 p-6 rounded-lg shadow-md max-w-md">
+		  <!-- Proyecto 2 -->
+		  <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+			<img src="/images/TecnoMarket.png" alt="Landing Page para Empresa de Tecnología" class="w-full h-48 object-cover rounded-lg mb-4" />
 			<h3 class="text-xl font-bold mb-2 text-purple-500">Landing Page para Empresa de Tecnología</h3>
-			<p class="mb-4 text-gray-300">Diseño y desarrollo de una landing page para promover soluciones tecnológicas.</p>
-			<p class="text-sm text-gray-500">Tecnologías: HTML, CSS, JavaScript, </p>
+			<p class="mb-4 text-gray-300">Diseño y desarrollo de una landing page para promover ventas de aparatos tecnologicos.</p>
+			<p class="text-sm text-gray-500">Tecnologías: HTML, CSS, JavaScript</p>
+			<a href="https://github.com/DoubtfulCafe/Proyecto-Frontend" target="_blank" class="text-purple-500 hover:underline">Ver Proyecto</a>
+		  </div>
+		  <!-- Proyecto 3 -->
+		  <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+			<img src="/images/Petfinder.png" alt="Página de Adopción de Mascotas" class="w-full h-48 object-cover rounded-lg mb-4" />
+			<h3 class="text-xl font-bold mb-2 text-purple-500">Página de Adopción de Mascotas</h3>
+			<p class="mb-4 text-gray-300">Plataforma que conecta mascotas en adopción con posibles dueños responsables.</p>
+			<p class="text-sm text-gray-500">Tecnologías: Next.js, Supabase</p>
+			<a href="https://adopcion-sigma.vercel.app/Landing" target="_blank" class="text-purple-500 hover:underline">Ver Proyecto</a>
+		  </div>
+		  <!-- Proyecto 4 -->
+		  <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+			<img src="/images/NicaSec.jpg" alt="NicaSecurity" class="w-full h-48 object-cover rounded-lg mb-4" />
+			<h3 class="text-xl font-bold mb-2 text-purple-500">NicaSecurity (Voluntario)</h3>
+			<p class="mb-4 text-gray-300">Proyecto voluntario enfocado en conferencias, planificación y consultoría en ciberseguridad.</p>
+			<p class="text-sm text-gray-500">Tecnologías: Herramientas de pentesting, Metasploit</p>
+			<a href="https://www.facebook.com/profile.php?id=61559154643121" target="_blank" class="text-purple-500 hover:underline">Ver Proyecto</a>
 		  </div>
 		</div>
 	  </div>
 	</section>
+  
+	<!-- Certificaciones -->
+	<section class="container mx-auto px-6 py-12">
+	  <h2 class="text-3xl font-bold text-center mb-8 text-purple-500">Certificaciones</h2>
+	  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+		<div class="bg-gray-800 p-6 rounded-lg">
+		  <h3 class="text-xl font-bold mb-2 text-purple-500">Ciberseguridad</h3>
+		  <p class="text-gray-300">Certificación en Seguridad Ofensiva (IRSI)</p>
+		</div>
+		<div class="bg-gray-800 p-6 rounded-lg">
+			<h3 class="text-xl font-bold mb-2 text-purple-500">Redes</h3>
+			<p class="text-gray-300">CCNA 1 V7 (Cisco)</p>
+		  </div>
+		<div class="bg-gray-800 p-6 rounded-lg">
+		  <h3 class="text-xl font-bold mb-2 text-purple-500">Python</h3>
+		  <p class="text-gray-300">Python Essentials (Cisco)</p>
+		</div>
+		<div class="bg-gray-800 p-6 rounded-lg">
+		  <h3 class="text-xl font-bold mb-2 text-purple-500">Java y Spring Boot</h3>
+		  <p class="text-gray-300">Certificación en Desarrollo Backend (Alura)</p>
+		</div>
+		<div class="bg-gray-800 p-6 rounded-lg">
+		  <h3 class="text-xl font-bold mb-2 text-purple-500">Business Agility</h3>
+		  <p class="text-gray-300">Certificación en Metodologías Ágiles (Alura)</p>
+		</div>
+		<div class="bg-gray-800 p-6 rounded-lg">
+		  <h3 class="text-xl font-bold mb-2 text-purple-500">Emprendimiento</h3>
+		  <p class="text-gray-300">Certificación en Innovación y Emprendimiento (Alura)</p>
+		</div>
+	  </div>
+	</section>
+  
+<!-- Sobre Mí - Detalles Personales -->
+<section class="bg-gray-900 py-12">
+	<div class="container mx-auto px-6">
+	  <h2 class="text-3xl font-bold text-center mb-8 text-purple-500">Más Sobre Mí</h2>
+	  <div class="grid md:grid-cols-1 gap-8">
+		<div>
+		  <p class="mb-4 text-gray-300">
+			Fuera del trabajo, disfruto explorar nuevas técnicas de ciberseguridad en plataformas como TryHackMe. Este aprendizaje continuo refuerza mi objetivo de convertirme en auditor de ciberseguridad a largo plazo. También soy un amante de la música, que me inspira y relaja mientras trabajo en proyectos desafiantes.
+		  </p>
+		  <p class="text-gray-300">
+			Mi objetivo a corto plazo es consolidarme como un profesional senior en pruebas de penetración (pentesting), mientras que, a largo plazo, aspiro a contribuir a la protección de infraestructuras críticas y al fortalecimiento de la seguridad digital en la región.
+		  </p>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
   
 	<!-- Contacto -->
 	<section class="bg-gradient-to-r from-purple-900 to-blue-900 text-white py-12 text-center">
 	  <h2 class="text-3xl font-bold mb-8">Contacto</h2>
 	  <p class="mb-4 text-gray-300">¿Interesado en colaborar o conocer más sobre mi trabajo? ¡No dudes en contactarme!</p>
 	  <div class="flex justify-center gap-4">
-		<a href="mailto:danielopina137@gmail.com" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2">
+		<!-- Botón de Correo -->
+		<a href="mailto:danielopina137@gmail.com" 
+		   class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2">
 		  <img src="/images/email-icon.svg" alt="Email" class="w-6 h-6" />
 		  Correo
 		</a>
-		<a href="https://www.linkedin.com/in/daniel-villeda-v/" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2">
+		<!-- Botón de LinkedIn -->
+		<a href="https://www.linkedin.com/in/daniel-villeda-v/" target="_blank" 
+		   class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2">
 		  <img src="/images/linkedin-icon.svg" alt="LinkedIn" class="w-6 h-6" />
-		  GitHub
-		</a>
-		<a href="https://github.com/DoubtfulCafe" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2">
-		  <img src="/images/github-icon.svg" alt="GitHub" class="w-6 h-6" />
 		  LinkedIn
+		</a>
+		<!-- Botón de GitHub -->
+		<a href="https://github.com/DoubtfulCafe" target="_blank" 
+		   class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2">
+		  <img src="/images/github-icon.svg" alt="GitHub" class="w-6 h-6" />
+		  GitHub
 		</a>
 	  </div>
 	</section>
