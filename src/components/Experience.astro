@@ -1,0 +1,37 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Director de Transmisiones & Consultor en Ciberseguridad",
+    company: "Nica Security",
+    description:
+      "Lidero la producción y estrategia de contenido multimedia en YouTube, combinando mi experiencia en ciberseguridad con enfoques innovadores para maximizar el engagement y el alcance de la comunidad.",
+  },
+  
+  {
+    date: "2019 - 2020",
+    title: "Líder en Estrategia Digital y Difusión",
+    company: "Fundación Integral de Ayuda FIA",
+    description:
+      "Encabecé el equipo tecnológico, implementando soluciones digitales innovadoras y asegurando una comunicación estratégica que potenció la difusión de proyectos sociales de alto impacto.",
+  },
+  {
+    date: "2018",
+    title: "Creador de Campañas y Diseñador Gráfico",
+    company: "Opoprint",
+    description:
+      "Diseñé campañas publicitarias vibrantes y piezas gráficas cautivadoras que reforzaron la identidad de la marca, impulsando su presencia y creando conexiones emocionales duraderas.",
+  }
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li>
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

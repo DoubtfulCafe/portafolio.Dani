@@ -1,19 +1,61 @@
 ---
-
+// index.astro
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
-
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import SocialCard from '../components/SocialCard.astro';
+import GithubIcon from '../components/icons/Github.astro';
+import LinkedinIcon from '../components/icons/Linkedin.astro';
+import MailIcon from '../components/icons/Mail.astro';
 
 ---
+<Layout title="Portafolio  Daniel Villeda">
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-24">
+			<!-- Imagen de perfil -->
+			<a href="/" class="flex items-center" aria-label="Inicio">
+				<img src="/images/Perfil.jpg" alt="Foto de perfil" class="size-32 rounded-full border-4 border-blue-500 shadow-lg" />
+		
+			</a>
+			
+		
+			<h1 class="text-white text-5xl font-bold flex flex-wrap gap-x-4 pb-4">
+			  Hey, soy Daniel 
+			  <a href="https://www.linkedin.com/in/daniel-villeda-v/"  target="_blank" rel="noopener" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a>
+			</h1>
+			<h2 class="text-2xl opacity-80">
+			  "Soy un ingeniero en sistemas y ciberseguridad con pasión por proteger el mundo digital y desarrollar soluciones backend seguras y escalables."
+			</h2>
+		
+			<nav class="flex gap-x-2 mt-10">
+				<SocialCard href="https://www.linkedin.com/in/daniel-villeda-v/">
+					<LinkedinIcon class="size-4 md:size-6" />
+					LinkedIn
+				</SocialCard>
+				<SocialCard href="https://github.com/DoubtfulCafe">
+					<GithubIcon class="size-4 md:size-6" />
+					Github
+				</SocialCard>
+				<SocialCard href="mailto:dilleda2007@gmail.com">
+					<MailIcon class="size-4 md:size-6" />
+					dilleda2007@gmail.com
+				</SocialCard>
+				
+			</nav>
+		  </SectionContainer>
+		
+		   <SectionContainer id="experiencia">
+				<h2 class="text-4xl">Experiencia laboral </h2>
+				<Experience />
+		   </SectionContainer>
 
-<Layout>
-	<main>
-		<h1 class="text-white">
-			Hey, Soy Daniel <Badge>Disponible para trabajar</Badge> 
-		</h1>
-		<h2>
-			"Soy un ingeniero en sistemas y ciberseguridad
-			 con pasión por proteger el mundo digital y desarrollar soluciones backend seguras y escalables."
-		</h2>
+		   <SectionContainer id="proyectos">
+			<h2 class="text-4xl">Proyectos</h2>
+			<Projects />
+	   	   </SectionContainer>
 	</main>
+ 
+
 </Layout>
