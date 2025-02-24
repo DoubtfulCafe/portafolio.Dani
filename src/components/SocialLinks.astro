@@ -1,0 +1,33 @@
+---
+import SocialCard from "./SocialCard.astro"
+import LinkedinIcon from "./icons/Linkedin.astro"
+import GithubIcon from "./icons/Github.astro"
+import MailIcon from "./icons/Mail.astro"
+
+const SOCIAL_LINKS = [
+  {
+    href: "https://www.linkedin.com/in/daniel-villeda-v/",
+    icon: LinkedinIcon,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://github.com/DoubtfulCafe",
+    icon: GithubIcon,
+    label: "Github",
+  },
+  {
+    href: "mailto:dilleda2007@gmail.com",
+    icon: MailIcon,
+    label: "dilleda2007@gmail.com",
+  },
+];
+---
+
+<nav class="flex gap-x-2 mt-10">
+  {SOCIAL_LINKS.map(({ href, icon: Icon, label }) => (
+    <SocialCard href={href}>
+      <Icon class="size-4 md:size-6" />
+      {label}
+    </SocialCard>
+  ))}
+</nav>

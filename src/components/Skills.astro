@@ -1,0 +1,74 @@
+---
+interface Skill {
+  name: string;
+  level: number; // Porcentaje del nivel de la habilidad
+}
+
+interface SkillCategory {
+  title: string;
+  skills: Skill[];
+}
+
+const skills: SkillCategory[] = [
+  {
+    title: "Ciberseguridad",
+    skills: [
+      { name: "Pentesting, Análisis de Vulnerabilidades", level: 95 },
+      { name: "Simulaciones de ataques cibernéticos, Metasploit, Burp Suite", level: 85 },
+      { name: "Análisis de seguridad: Uso de Nessus, Nmap y Wireshark", level: 90 },
+    ],
+  },
+  {
+    title: "Desarrollo Backend",
+    skills: [
+      { name: "Python", level: 95 },
+      { name: "Java, Spring Boot, Bases de datos (MySQL, Oracle, Supabase)", level: 85 },
+      { name: "Next.js, Laravel", level: 70 },
+    ],
+  },
+  {
+    title: "Herramientas y Metodologías",
+    skills: [
+      { name: "Metasploit, CrackMapExec, BloodHound, JohnTheRipper, Hashcat", level: 85 },
+      { name: "Windows Server, Linux", level: 80 },
+      { name: "Bash Scripting, Python", level: 75 },
+      { name: "Seguridad de la Información", level: 90 },
+      { name: "Virtualización", level: 75 },
+      { name: "Administración de Proyectos", level: 80 },
+      { name: "Lectura Comprensiva y Redacción", level: 85 },
+      { name: "Especialización en Pentesting", level: 95 },
+      { name: "Metodologías: Agile, Scrum", level: 85 },
+    ],
+  },
+];
+---
+
+<section class="w-full max-w-3xl mx-auto mt-10 mb-16">
+  <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+    Habilidades Clave
+  </h2>
+
+  <div class="space-y-6">
+    {skills.map(({ title, skills }) => (
+      <div>
+        <h3 class="text-xl font-semibold text-gray-200 mb-3">{title}</h3>
+        <ul class="space-y-4">
+          {skills.map(({ name, level }) => (
+            <li class="flex flex-col">
+              <div class="flex justify-between">
+                <span class="text-gray-300">{name}</span>
+                <span class="text-gray-400 text-sm font-semibold">{level}%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2.5 mt-2 relative">
+                <div
+                  class="bg-green-500 h-2.5 rounded-full transition-all duration-500"
+                  style={`width: ${level}%`}
+                ></div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>

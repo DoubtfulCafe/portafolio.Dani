@@ -5,15 +5,15 @@ import Badge from '../components/Badge.astro';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/Projects.astro';
 import SectionContainer from '../components/SectionContainer.astro';
-import SocialCard from '../components/SocialCard.astro';
-import GithubIcon from '../components/icons/Github.astro';
-import LinkedinIcon from '../components/icons/Linkedin.astro';
-import MailIcon from '../components/icons/Mail.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import Skills from '../components/Skills.astro';
+
+
 
 ---
 <Layout title="Portafolio  Daniel Villeda">
 	<main class="px-4">
-		<SectionContainer class="py-44 pb-24">
+		<SectionContainer id="sobre-mi" class="py-44 pb-24">
 			<!-- Imagen de perfil -->
 			<a href="/" class="flex items-center" aria-label="Inicio">
 				<img src="/images/Perfil.jpg" alt="Foto de perfil" class="size-32 rounded-full border-4 border-blue-500 shadow-lg" />
@@ -28,31 +28,35 @@ import MailIcon from '../components/icons/Mail.astro';
 			<h2 class="text-2xl opacity-80">
 			  "Soy un ingeniero en sistemas y ciberseguridad con pasión por proteger el mundo digital y desarrollar soluciones backend seguras y escalables."
 			</h2>
+
+			<p class="mb-4 text-gray-300">
+				Mi objetivo es identificar vulnerabilidades críticas y ayudar a organizaciones, especialmente en sectores regulados como servicios financieros y telecomunicaciones, a fortalecer su seguridad digital. Aspiro a generar un impacto en Centroamérica, Sudamérica y el Caribe, contribuyendo a un mundo más seguro y conectado.
+			  </p>
+			  <p class="mb-4 text-gray-300">
+				Además de la ciberseguridad, me apasiona el desarrollo backend. Me especializo en diseñar soluciones técnicas que no solo resuelven problemas, sino que también garantizan seguridad, eficiencia y escalabilidad. Creo que la tecnología debe ser una aliada y no un riesgo, por lo que siempre busco un equilibrio entre innovación y protección.
+			  </p>
+			  <p class="text-gray-300">
+				Mi enfoque combina análisis de seguridad con desarrollo sólido, asegurando que cada sistema sea confiable y resistente ante amenazas digitales.
+			  </p>
+			  
 		
-			<nav class="flex gap-x-2 mt-10">
-				<SocialCard href="https://www.linkedin.com/in/daniel-villeda-v/">
-					<LinkedinIcon class="size-4 md:size-6" />
-					LinkedIn
-				</SocialCard>
-				<SocialCard href="https://github.com/DoubtfulCafe">
-					<GithubIcon class="size-4 md:size-6" />
-					Github
-				</SocialCard>
-				<SocialCard href="mailto:dilleda2007@gmail.com">
-					<MailIcon class="size-4 md:size-6" />
-					dilleda2007@gmail.com
-				</SocialCard>
-				
-			</nav>
+			<SocialLinks />
 		  </SectionContainer>
+		  <SectionContainer id="habilidades">
+			
+			<Skills />
+
+	   </SectionContainer>
 		
 		   <SectionContainer id="experiencia">
-				<h2 class="text-4xl">Experiencia laboral </h2>
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				Experiencia Laboral
+			  </h2>
 				<Experience />
 		   </SectionContainer>
 
 		   <SectionContainer id="proyectos">
-			<h2 class="text-4xl">Proyectos</h2>
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center-4xl">Proyectos</h2>
 			<Projects />
 	   	   </SectionContainer>
 	</main>
